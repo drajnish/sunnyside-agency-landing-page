@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600;900&family=Fraunces:wght@700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+header {
+  background: url(images/mobile/image-header.jpg) center center/cover no-repeat;
+  width: 100%;
+  height: 540px;
+}
+
+.top-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.desktop-navigation {
+  display: none;
+}
+
+.navigation {
+  display: none;
+  background-color: #fffbf8;
+  width: 85%;
+  margin: auto;
+  position: absolute;
+  right: calc((100vw - 85vw) / 2);
+  top: 100px;
+}
+
+.navigation.active {
+  display: block;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.navigation ul li {
+  list-style-type: none;
+  padding: 15px 0;
+  margin-bottom: 10px;
+}
+
+.navigation::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-right: 30px solid #fff;
+  position: absolute;
+  right: 0;
+  top: -25px;
+}
+
+.navigation ul a {
+  padding: 12px 30px;
+  text-decoration: none;
+  color: hsl(232, 10%, 55%);
+}
+
+.navigation ul li:hover,
+.navigation ul li a:hover {
+  background-color: hsl(51, 100%, 49%);
+  text-transform: uppercase;
+  font-family: "Fraunces", sans-serif;
+  color: hsl(212, 27%, 19%);
+  border-radius: 50px;
+}
+
+.heading {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 8px;
+  margin-top: 75px;
+}
+
+.down-arrow {
+  display: block;
+  margin: 55px auto 0;
+}
+
+.img-container img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  text-align: center;
+  padding: 10px;
+  margin: 30px 0 55px;
+}
+
+.content h1 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  color: hsl(212, 27%, 19%);
+  padding: 10px;
+  margin: 0 15px;
+}
+
+.content p {
+  color: hsl(232, 10%, 55%);
+  line-height: 32px;
+}
+
+.content span {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: hsl(212, 27%, 19%);
+  position: relative;
+}
+
+.content span::after {
+  content: "";
+  width: 145px;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: -7px;
+  border-bottom: 8px solid #fcf0b4;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.audience .content span::after {
+  border-bottom-color: #ffddd4;
+}
+
+.design,
+.photography {
+  position: relative;
+}
+
+.design .design-content,
+.photography .photography-content {
+  padding-bottom: 55px;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.design .design-content h1 {
+  color: hsl(167, 40%, 24%);
+}
+
+.design .design-content p {
+  font-size: 17px;
+  line-height: 26px;
+  color: hsl(167, 40%, 24%);
+}
+
+.photography .photography-content h1 {
+  color: hsl(198, 62%, 26%);
+}
+
+.photography .photography-content p {
+  font-size: 17px;
+  line-height: 26px;
+  color: hsl(198, 62%, 26%);
+}
+
+.testimonials {
+  background-color: #fffbf8;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.testimonials h5 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: hsl(210, 4%, 67%);
+  text-transform: uppercase;
+}
+
+.testimonial {
+  padding: 35px 14px;
+  margin: 10px 10px;
+}
+
+.testimonial .avatar {
+  width: 70px;
+  margin: auto;
+}
+
+.testimonial .avatar img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.text p {
+  color: hsl(213, 9%, 39%);
+  line-height: 30px;
+}
+
+.info h3 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  color: hsl(212, 27%, 19%);
+  margin-bottom: 10px;
+}
+
+.info span {
+  font-size: 14px;
+  color: hsl(210, 4%, 67%);
+}
+
+.gallery-img {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-img picture {
+  padding: 0;
+  margin: 0;
+  width: 50%;
+}
+
+.gallery-img img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  background-color: #90d4c5;
+  text-align: center;
+  padding: 50px 10px;
+}
+
+footer .footer-logo {
+  width: 50%;
+}
+
+footer .links ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0 70px;
+}
+
+footer .links li {
+  list-style-type: none;
+}
+
+footer .links li a {
+  color: hsl(167, 40%, 24%);
+  text-decoration: none;
+}
+
+footer .social-media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 70px;
+}
+
+@media (min-width: 376px) {
+  header {
+    background: url(images/desktop/image-header.jpg) center center/cover
+      no-repeat;
+    height: 800px;
+  }
+
+  .top-head {
+    align-items: center;
+    padding: 35px 50px;
+  }
+
+  .top-head .logo {
+    width: 15%;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .desktop-navigation {
+    display: inline-block;
+  }
+
+  .desktop-navigation ul {
+    display: flex;
+  }
+
+  .desktop-navigation ul li {
+    list-style-type: none;
+  }
+
+  .desktop-navigation ul li a {
+    text-decoration: none;
+    padding: 20px 30px;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .desktop-navigation ul li a:hover {
+    font-family: "Fraunces", sans-serif;
+    color: hsl(212, 27%, 19%);
+    text-transform: uppercase;
+    background: hsl(0, 0%, 100%);
+    border-radius: 50px;
+  }
+
+  .down-arrow {
+    margin-top: 100px;
+  }
+
+  .middle-section {
+    display: flex;
+  }
+
+  .img-container,
+  .content {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  .brand .img-container {
+    order: 2;
+  }
+
+  .content {
+    padding: 0;
+    margin: auto;
+  }
+
+  .text-content {
+    padding: 30px;
+    width: 70%;
+    margin: auto;
+    text-align: left;
+  }
+
+  .text-content h1 {
+    margin: 0;
+    padding: 0 130px 0 0;
+  }
+
+  .design,
+  .photography {
+    float: left;
+    width: 50%;
+  }
+
+  .design .design-content .text-content,
+  .photography .photography-content .text-content {
+    text-align: center;
+    width: 60%;
+  }
+
+  .design .design-content .text-content h1,
+  .photography .photography-content .text-content h1 {
+    padding: 0;
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .desktop-testimonial {
+    display: flex;
+  }
+
+  .gallery-img {
+    flex-wrap: nowrap;
+  }
+
+  footer .footer-logo {
+    width: 15%;
+  }
+
+  footer .links {
+    width: 30%;
+    margin: auto;
+  }
+
+  footer .social-media {
+    width: 25%;
+    margin: auto;
+  }
+}
