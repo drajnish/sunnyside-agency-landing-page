@@ -107,7 +107,12 @@ header {
   margin: 30px 0 55px;
 }
 
-.content h1 {
+/* .brand,
+.audience {
+  background-color: #fffbf8;
+} */
+
+.content h2 {
   font-family: "Fraunces", sans-serif;
   font-weight: 900;
   color: hsl(212, 27%, 19%);
@@ -120,16 +125,18 @@ header {
   line-height: 32px;
 }
 
-.content span {
+.content a {
   font-family: "Fraunces", sans-serif;
+  text-decoration: none;
   font-weight: 900;
   text-transform: uppercase;
   color: hsl(212, 27%, 19%);
   position: relative;
 }
 
-.content span::after {
+.content a::after {
   content: "";
+  display: block;
   width: 145px;
   height: 0;
   position: absolute;
@@ -140,8 +147,16 @@ header {
   z-index: -1;
 }
 
-.audience .content span::after {
+.audience .content a::after {
   border-bottom-color: #ffddd4;
+}
+
+.content a:hover::after {
+  border-bottom-color: hsl(51, 100%, 49%);
+}
+
+.audience .content a:hover::after {
+  border-bottom-color: hsl(7, 99%, 70%);
 }
 
 .design,
@@ -157,7 +172,7 @@ header {
   bottom: 0;
 }
 
-.design .design-content h1 {
+.design .design-content h2 {
   color: hsl(167, 40%, 24%);
 }
 
@@ -167,7 +182,7 @@ header {
   color: hsl(167, 40%, 24%);
 }
 
-.photography .photography-content h1 {
+.photography .photography-content h2 {
   color: hsl(198, 62%, 26%);
 }
 
@@ -183,9 +198,10 @@ header {
   padding: 50px 0;
 }
 
-.testimonials h5 {
+.testimonials h2 {
   font-family: "Fraunces", sans-serif;
   font-weight: 900;
+  font-size: 16px;
   letter-spacing: 5px;
   color: hsl(210, 4%, 67%);
   text-transform: uppercase;
@@ -246,33 +262,41 @@ footer {
   padding: 50px 10px;
 }
 
-footer .footer-logo {
+.footer-logo {
   width: 50%;
 }
 
-footer .links ul {
+.links ul {
   display: flex;
   justify-content: space-around;
   padding: 30px 0 70px;
 }
 
-footer .links li {
+.links li {
   list-style-type: none;
 }
 
-footer .links li a {
+.links li a {
   color: hsl(167, 40%, 24%);
   text-decoration: none;
 }
 
-footer .social-media {
+.social-media {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 0 70px;
 }
 
-@media (min-width: 376px) {
+.links li a:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+.social-media a img:hover {
+  fill: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 450px) {
   header {
     background: url(images/desktop/image-header.jpg) center center/cover
       no-repeat;
@@ -312,9 +336,9 @@ footer .social-media {
 
   .desktop-navigation ul li a:hover {
     font-family: "Fraunces", sans-serif;
-    color: hsl(212, 27%, 19%);
+    /* color: hsl(212, 27%, 19%); */
     text-transform: uppercase;
-    background: hsl(0, 0%, 100%);
+    background: #6fcfff;
     border-radius: 50px;
   }
 
@@ -348,7 +372,7 @@ footer .social-media {
     text-align: left;
   }
 
-  .text-content h1 {
+  .text-content h2 {
     margin: 0;
     padding: 0 130px 0 0;
   }
@@ -365,8 +389,8 @@ footer .social-media {
     width: 60%;
   }
 
-  .design .design-content .text-content h1,
-  .photography .photography-content .text-content h1 {
+  .design .design-content .text-content h2,
+  .photography .photography-content .text-content h2 {
     padding: 0;
   }
 
@@ -374,6 +398,10 @@ footer .social-media {
     content: "";
     clear: both;
     display: table;
+  }
+
+  .testimonials h2 {
+    font-size: 24px;
   }
 
   .desktop-testimonial {
